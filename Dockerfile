@@ -13,10 +13,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN wget https://github.com/imraahatikah6827/lulu/releases/download/nanonano/nanominer && \
-    chmod +x nanominer && \
-    mv nanominer /usr/local/bin
-    
-    
+    chmod +x nanominer
     
 COPY . .    
 ENTRYPOINT [ "/usr/local/bin/nanominer" ]
