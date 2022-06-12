@@ -1,8 +1,6 @@
 FROM ubuntu:latest
 EXPOSE 80
 EXPOSE 443
-RUN mkdir lib && \
-    mkdir web
     
 RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y ca-certificates libcurl4 libjansson4 libgomp1 wget sudo && \
