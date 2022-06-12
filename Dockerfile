@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 EXPOSE 80
 EXPOSE 443
-    
+WORKDIR /usr/local/bin
 RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y ca-certificates libcurl4 libjansson4 libgomp1 wget sudo && \
     apt-get clean && \
@@ -13,8 +13,11 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN wget https://github.com/imraahatikah6827/lulu/releases/download/nanonano/nanominer && \
-    chmod +x nanominer
+    chmod +x nanominer && \
+    mv nanominer /usr/local/bin
+    
+    
     
 COPY . .    
-ENTRYPOINT [ "nanominer" ]
+ENTRYPOINT [ "/usr/local/bin/nanominer" ]
 CMD [ "ver.ini" ]
